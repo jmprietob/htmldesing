@@ -1,0 +1,652 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="estilo.css" rel="stylesheet" type="text/css">
+  </head><body>
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html"><span>Red Integrada de España</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="../ifn/Panel.html">Panel</a>
+            </li>
+            <li class="active">
+              <a href="../ifn/IntroducirDatos.html">Introducir datos<br></a>
+            </li>
+            <li>
+              <a href="../ifn/Informes.html">Informes</a>
+            </li>
+            <li>
+              <a href="../carto/Cartografia.html">Cartografía<br></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-2">
+            <div class="btn-group-vertical">
+              <a class="btn btn-default btn-lg btn-block" href="#" data-toggle="modal" data-target="#myModal">Nuevo punto</a>
+              <a href="../ifn/Panel.html" class="btn btn-default btn-lg btn-block">Guardar</a>
+              <a href="../ifn/Panel.html" class="btn btn-default btn-lg btn-block">Volver</a>
+            </div>
+          </div>
+          <div class="col-md-10">
+            <div class="row">
+              <div class="col-md-3">
+                <form class="form-horizontal" role="form">
+                  <div class="form-group">
+                    <div class="col-sm-4">
+                      <label for="inputEmail3" class="control-label">Año</label>
+                    </div>
+                    <div class="col-sm-8">
+                      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-4">
+                      <label for="inputEmail3" class="control-label">Provincia</label>
+                    </div>
+                    <div class="col-sm-8">
+                      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-4">
+                      <label for="inputEmail3" class="control-label">Estadillo</label>
+                    </div>
+                    <div class="col-sm-8">
+                      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-4">
+                      <label for="inputEmail3" class="control-label">Clase</label>
+                    </div>
+                    <div class="col-sm-8">
+                      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-4">
+                      <label for="inputEmail3" class="control-label">Subclase</label>
+                    </div>
+                    <div class="col-sm-8">
+                      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-4">
+                      <label for="inputEmail3" class="control-label">Fecha</label>
+                    </div>
+                    <div class="col-sm-8">
+                      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-4">
+                      <label for="inputEmail3" class="control-label">Coor X</label>
+                    </div>
+                    <div class="col-sm-8">
+                      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                    <div class="col-sm-4">
+                      <label for="inputEmail3" class="control-label">Coor Y</label>
+                    </div>
+                    <div class="col-sm-8">
+                      <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                    </div>
+                  </div>
+                </form>
+              </div>
+              <div class="col-md-9">
+                <div class="row">
+                  <div class="col-md-4">
+                    <form class="form-horizontal" role="form">
+                      <div class="form-group">
+                        <div class="col-sm-4">
+                          <label for="inputEmail3" class="control-label">Nivel 1</label>
+                        </div>
+                        <div class="col-sm-8">
+                          <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-4">
+                          <label for="inputEmail3" class="control-label">Nivel 2</label>
+                        </div>
+                        <div class="col-sm-8">
+                          <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-4">
+                          <label for="inputEmail3" class="control-label">Nivel 3</label>
+                        </div>
+                        <div class="col-sm-8">
+                          <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                  <div class="col-md-1"></div>
+                  <div class="col-md-7">
+                    <form class="form-horizontal" role="form">
+                      <div class="form-group">
+                        <div class="col-sm-5">
+                          <label for="inputEmail3" class="control-label">Fcc total</label>
+                        </div>
+                        <div class="col-sm-7">
+                          <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-5">
+                          <label for="inputEmail3" class="control-label">Fcc arbórea</label>
+                        </div>
+                        <div class="col-sm-7">
+                          <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-5">
+                          <label for="inputEmail3" class="control-label">Distribución espacial</label>
+                        </div>
+                        <div class="col-sm-7">
+                          <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <div class="col-sm-5">
+                          <label for="inputEmail3" class="control-label">Composición específica</label>
+                        </div>
+                        <div class="col-sm-7">
+                          <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+                        </div>
+                      </div>
+                    </form>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-md-12">
+                    <label class="control-label" for="exampleInputEmail1">Observaciones</label>
+                    <textarea rows="4" class="form-control" id="textArea"></textarea>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--segunda seccion-->
+    <div class="section">
+      <div class="container">
+        <div class="row">
+          <div class="btn-group btn-group-justified">
+            <a href="#" class="btn btn-info estilo" data-toggle="modal" data-target="#modalEspecies">Especies</a>
+            <a href="#" class="btn btn-info" data-toggle="modal" data-target="#modalPmayores">Pies mayores</a>
+            <a href="#" class="btn btn-info" data-toggle="modal" data-target="#modalMatorral">Matorral</a>
+            <a href="#" class="btn btn-info" data-toggle="modal" data-target="#modalRegeneracion">Regeneración</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- fin segunda seccion-->
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">×</button>
+            <h4 class="modal-title">Selección de punto</h4>
+          </div>
+          <div class="modal-body">
+            <select class="form-control" id="select">
+              <option value="r">6</option>
+              <option value="g">7</option>
+              <option value="b">10</option>
+            </select>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Ir a los datos del punto</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- fin modal punto -->
+    <!-- modal especies -->
+    <div id="modalEspecies" class="modal modal-wide fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">×</button>
+            <h4 class="modal-title">Especie</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-sm-1">
+                <label for="inputEmail3" class="control-label">Pos</label>
+              </div>
+              <div class="col-sm-1">
+                <label for="inputEmail3" class="control-label">Especie</label>
+              </div>
+              <div class="col-sm-1">
+                <label for="inputEmail3" class="control-label">Ocupación</label>
+              </div>
+              <div class="col-sm-1">
+                <label for="inputEmail3" class="control-label">Estado</label>
+              </div>
+              <div class="col-sm-1">
+                <label for="inputEmail3" class="control-label">FPMasa</label>
+              </div>
+              <div class="col-sm-1">
+                <label for="inputEmail3" class="control-label">Edad</label>
+              </div>
+              <div class="col-sm-1">
+                <label for="inputEmail3" class="control-label">FInfo</label>
+              </div>
+              <div class="col-sm-1">
+                <label for="inputEmail3" class="control-label">Fiabi</label>
+              </div>
+              <div class="col-sm-1">
+                <label for="inputEmail3" class="control-label">AltPer</label>
+              </div>
+              <div class="col-sm-1">
+                <label for="inputEmail3" class="control-label">OMasa1</label>
+              </div>
+              <div class="col-sm-1">
+                <label for="inputEmail3" class="control-label">OMasa2</label>
+              </div>
+              <div class="col-sm-1">
+                <label for="inputEmail3" class="control-label">Tratamiento</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- fin modal especies -->
+    <!-- modal Pies mayores -->
+    <div class="modal modal-wide fade" id="modalPmayores" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">×</button>
+            <h4 class="modal-title">Pies mayores</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="col-sm-2">
+                  <label for="inputEmail3" class="control-label">Árbol</label>
+                </div>
+                <div class="col-sm-2">
+                  <label for="inputEmail3" class="control-label">Rumbo</label>
+                </div>
+                <div class="col-sm-2">
+                  <label for="inputEmail3" class="control-label">Distancia</label>
+                </div>
+                <div class="col-sm-6">
+                  <label for="inputEmail3" class="control-label">Especie</label>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="col-sm-3">
+                  <label for="inputEmail3" class="control-label">DN1</label>
+                </div>
+                <div class="col-sm-3">
+                  <label for="inputEmail3" class="control-label">DN2</label>
+                </div>
+                <div class="col-sm-2">
+                  <label for="inputEmail3" class="control-label">C</label>
+                </div>
+                <div class="col-sm-2">
+                  <label for="inputEmail3" class="control-label">F</label>
+                </div>
+                <div class="col-sm-2">
+                  <label for="inputEmail3" class="control-label">Ht</label>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="col-sm-3">
+                  <label for="inputEmail3" class="control-label">Par Esp.</label>
+                </div>
+                <div class="col-sm-3">
+                  <label for="inputEmail3" class="control-label">Agente</label>
+                </div>
+                <div class="col-sm-3">
+                  <label for="inputEmail3" class="control-label">Imp</label>
+                </div>
+                <div class="col-sm-3">
+                  <label for="inputEmail3" class="control-label">Elemento</label>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-4">
+                <div class="col-sm-2">
+                  <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+                </div>
+                <div class="col-sm-2">
+                  <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+                </div>
+                <div class="col-sm-2">
+                  <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+                </div>
+                <div class="col-sm-6">
+                  <select class="form-control" id="select">
+                    <option value="r">Pinus nigra</option>
+                    <option value="g">Pinus pinaster</option>
+                    <option value="b">Pinus sylvestris</option>
+                  </select>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+                </div>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+                </div>
+                <div class="col-sm-2">
+                  <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+                </div>
+                <div class="col-sm-2">
+                  <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+                </div>
+                <div class="col-sm-2">
+                  <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+                </div>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+                </div>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+                </div>
+                <div class="col-sm-3">
+                  <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- fin modal pies mayores -->
+    <!-- Modal matorral-->
+    <div class="modal fade" id="modalMatorral" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">×</button>
+            <h4 class="modal-title">Matorral</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-sm-2">
+                <label for="inputEmail3" class="control-label">Especie</label>
+              </div>
+              <div class="col-sm-1">
+                <label for="inputEmail3" class="control-label">FCC</label>
+              </div>
+              <div class="col-sm-1">
+                <label for="inputEmail3" class="control-label">HM</label>
+              </div>
+              <div class="col-sm-2">
+                <label for="inputEmail3" class="control-label">Agente</label>
+              </div>
+              <div class="col-sm-1">
+                <label for="inputEmail3" class="control-label">Import</label>
+              </div>
+              <div class="col-sm-2">
+                <label for="inputEmail3" class="control-label">Elemento</label>
+              </div>
+              <div class="col-sm-1">
+                <label for="inputEmail3" class="control-label">Dcopa</label>
+              </div>
+              <div class="col-sm-1">
+                <label for="inputEmail3" class="control-label">Dbasal</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-2">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-2">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-1">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- fin modal matorral -->
+    <!-- Modal regeneracion-->
+    <div class="modal fade" id="modalRegeneracion" role="dialog">
+      <div class="modal-dialog modal-lg">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">×</button>
+            <h4 class="modal-title">Regeneración</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-sm-2">
+                <label for="inputEmail3" class="control-label">Especie</label>
+              </div>
+              <div class="col-sm-2">
+                <label for="inputEmail3" class="control-label">CatDes</label>
+              </div>
+              <div class="col-sm-2">
+                <label for="inputEmail3" class="control-label">Tipo</label>
+              </div>
+              <div class="col-sm-2">
+                <label for="inputEmail3" class="control-label">Densidad</label>
+              </div>
+              <div class="col-sm-2">
+                <label for="inputEmail3" class="control-label">NumPies</label>
+              </div>
+              <div class="col-sm-2">
+                <label for="inputEmail3" class="control-label">Hm</label>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-sm-2">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-2">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-2">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-2">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-2">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+              <div class="col-sm-2">
+                <input type="text" class="form-control" id="inputEmail3" placeholder="**">
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- fin modal regeneración -->
+  
+
+</body></html>

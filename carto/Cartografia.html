@@ -1,0 +1,144 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1,user-scalable=no,maximum-scale=1,width=device-width">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="stylesheet" href="css/leaflet.css">
+    <link rel="stylesheet" type="text/css" href="css/qgis2web.css">
+    <link rel="stylesheet" href="css/label.css">
+    <link rel="stylesheet" href="css/MarkerCluster.css">
+    <link rel="stylesheet" href="css/MarkerCluster.Default.css">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+    <script src="js/leaflet.js"></script>
+    <script src="js/OSMBuildings-Leaflet.js"></script>
+    <script src="js/leaflet-hash.js"></script>
+    <script src="js/label.js"></script>
+    <script src="js/Autolinker.min.js"></script>
+    <script src="js/leaflet.markercluster.js"></script>
+    <style>
+      html, body, #map {
+                                        width: 100%;
+                                        height: 100%;
+                                        padding: 0;
+                                        margin: 0;
+                                    }
+    </style>
+    <title></title>
+  </head><body>
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html"><span>Red Integrada de España</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="../icp/Panel.html">Panel ICP</a>
+            </li>
+            <li>
+              <a href="../ifn/Panel.html">Panel IFN</a>
+            </li>
+            <li>
+              <a href="../carto/Cartografia.html">Cartografía<br></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="container-fluid" id="map">
+      <div class="row">
+        <div class="col-md-12"></div>
+      </div>
+    </div>
+    <script src="data/json_PuntosRedIntegrada2.js"></script>
+    <script>
+      L.ImageOverlay.include({
+                                        getBounds: function () {
+                                            return this._bounds;
+                                        }
+                                    });
+                                    var map = L.map('map', {
+                                        zoomControl:true, maxZoom:28, minZoom:1
+                                    }).fitBounds([[26.6560827288,-23.3834952351],[43.2805809586,11.3875673526]]);
+                                    var hash = new L.Hash(map);
+                                    map.attributionControl.addAttribution('<a href="https://github.com/tomchadwin/qgis2web" target="_blank">qgis2web</a>');
+                                    var feature_group = new L.featureGroup([]);
+                                    var bounds_group = new L.featureGroup([]);
+                                    var raster_group = new L.LayerGroup([]);
+                                    var layerOrder = new Array();
+                                    function stackLayers() {
+                                        for (index = 0; index < layerOrder.length; index++) {
+                                            map.removeLayer(layerOrder[index]);
+                                            map.addLayer(layerOrder[index]);
+                                        }
+                                    }
+                                    function restackLayers() {
+                                        for (index = 0; index < layerOrder.length; index++) {
+                                            layerOrder[index].bringToFront();
+                                        }
+                                    }
+                                    layerControl = L.control.layers({},{},{collapsed:false});
+                                    var overlay_Ortoimagen0 = L.tileLayer.wms('http://www.ign.es/wms-inspire/pnoa-ma?', {
+                                        layers: 'OI.OrthoimageCoverage',
+                                        format: 'image/png',
+                                        transparent: true,
+                                        continuousWorld : true,
+                                    });
+                                    raster_group.addLayer(overlay_Ortoimagen0);
+                                    var overlay_IGNBase1 = L.tileLayer.wms('http://www.ign.es/wms-inspire/ign-base?', {
+                                        layers: 'IGNBaseTodo',
+                                        format: 'image/png',
+                                        transparent: true,
+                                        continuousWorld : true,
+                                    });
+                                    raster_group.addLayer(overlay_IGNBase1);
+                                    function pop_PuntosRedIntegrada2(feature, layer) {
+                                        var popupContent = '<table><tr><th scope="row">punto</th><td>' + (feature.properties['punto'] !== null ? Autolinker.link(String(feature.properties['punto'])) : '') + '</td></tr></table>';
+                                        layer.bindPopup(popupContent);
+                                    }
+                            
+                                    function doStylePuntosRedIntegrada2() {
+                                        return {
+                                            radius: 2.0,
+                                            fillColor: '#33a02c',
+                                            color: '#ffffff',
+                                            weight: 0.0,
+                                            opacity: 1.0,
+                                            dashArray: '',
+                                            lineCap: 'butt',
+                                            lineJoin: 'miter',
+                                            fillOpacity: 1.0
+                                        }
+                                    }
+                                    function doPointToLayerPuntosRedIntegrada2(feature, latlng) {
+                                        return L.circleMarker(latlng, doStylePuntosRedIntegrada2())
+                                    }
+                                    var json_PuntosRedIntegrada2JSON = new L.geoJson(json_PuntosRedIntegrada2, {
+                                        onEachFeature: pop_PuntosRedIntegrada2, 
+                                        pointToLayer: doPointToLayerPuntosRedIntegrada2
+                                        });
+                                    layerOrder[layerOrder.length] = json_PuntosRedIntegrada2JSON;
+                            
+                                    bounds_group.addLayer(json_PuntosRedIntegrada2JSON);
+                                    feature_group.addLayer(json_PuntosRedIntegrada2JSON);
+                                    raster_group.addTo(map);
+                                    feature_group.addTo(map);
+                                    var baseMaps = {};
+                                    L.control.layers(baseMaps,{'<img src="legend/PuntosRedIntegrada2.png" /> Puntos Red Integrada': json_PuntosRedIntegrada2JSON,"IGNBase": overlay_IGNBase1,"Ortoimagen": overlay_Ortoimagen0,},{collapsed:false}).addTo(map);
+                                    L.control.scale({options: {position: 'bottomleft', maxWidth: 100, metric: true, imperial: false, updateWhenIdle: false}}).addTo(map);
+                                    stackLayers();
+                                    map.on('overlayadd', restackLayers);
+    </script>
+  
+
+</body></html>

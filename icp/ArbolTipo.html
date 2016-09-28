@@ -1,0 +1,269 @@
+<html><head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
+    <script type="text/javascript" src="http://netdna.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+    <link href="http://pingendo.github.io/pingendo-bootstrap/themes/default/bootstrap.css" rel="stylesheet" type="text/css">
+  </head><body>
+    <div class="navbar navbar-default navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-ex-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="../index.html"><span>Red Integrada de España</span></a>
+        </div>
+        <div class="collapse navbar-collapse" id="navbar-ex-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li>
+              <a href="../icp/Panel.html">Panel</a>
+            </li>
+            <li>
+              <a href="../icp/IntroducirDatos.html">Introducir datos<br></a>
+            </li>
+            <li class="active">
+              <a href="../icp/ArbolTipo.html">Árbol tipo</a>
+            </li>
+            <li>
+              <a href="../icp/Informes.html">Informes</a>
+            </li>
+            <li>
+              <a href="../carto/Cartografia.html">Cartografía<br></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-xs-12 col-md-2 col-md-offset-1">
+            <div class="row">
+              <h2 class="text-center text-primary">Temporada 2016</h2>
+            </div>
+            <div class="row">
+              <h1 class="text-center text-muted">Punto 4</h1>
+            </div>
+            <div class="row">
+              <label class="col-lg-2 control-label" for="inputEmail">Fecha</label>
+              <input class="form-control" id="fecha" placeholder="dia-mes-año" type="text">
+            </div>
+            <div class="row">
+              <label class="control-label" for="exampleInputEmail1">CCAA</label>
+              <input class="form-control" id="exampleInput" placeholder="" type="text">
+            </div>
+          </div>
+          <div class="col-md-3">
+            <img src="https://unsplash.imgix.net/uploads/1412112828986a673b954/1d8ef901?w=1024&amp;q=50&amp;fm=jpg&amp;s=9c44bb02d0811d30403b18a15a70e6a2" class="img-responsive">
+          </div>
+          <div class="col-md-4">
+            <div class="row">
+              <div class="col-md-12">
+                <h5>DESCRIPCIÓN DE LA LOCALIZACIÓN</h5>
+                <p>Se encuentra a
+                  <input type="text" class="" placeholder="grados" size="5">y
+                  <input type="text" class="" placeholder="pasos" size="5">pasos del testigo</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <h5>LUGAR DESDE EL QUE SE HA TOMADO LA FOTOGRAFÍA</h5>
+                <p>
+                  <input type="text" class="" placeholder="grados" size="5">grados y
+                  <input type="text" class="" placeholder="pasos" size="5">pasos desde el árbol tipo</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <h5>DESCRIPCIÓN DEL ÁRBOL FOTOGRAFIADO</h5>
+                <p>Diametro normal:
+                  <input type="text" class="" placeholder="DN" size="4">cm. Diametro de la base:
+                  <input type="text" class="" placeholder="DB" size="4">cm. Altura total:
+                  <input type="text" class="" placeholder="altura" size="4">m.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <h5>DESCRIPCIÓN DE LA COPA</h5>
+                <p>Altura de copa:
+                  <input type="text" class="" placeholder="AC" size="4">m. Diámetro de copa:
+                  <input type="text" class="" placeholder="DC" size="4">m.</p>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <h5>OTRAS ANOTACIONES</h5>
+                <input type="textarea" class="" placeholder="AC" size="50">
+              </div>
+            </div>
+          </div>
+          <div class="col-md-2">
+            <a class="btn btn-default btn-lg btn-block" href="#" data-toggle="modal" data-target="#myModal">Nuevo punto</a>
+            <a class="btn btn-default btn-lg btn-block" href="#">Insertar datos</a>
+            <a class="btn btn-default btn-lg btn-block" href="#">Verificar datos?</a>
+            <a class="btn btn-default btn-lg btn-block" href="../icp/Panel.html">Volver</a>
+          </div>
+        </div>
+        <div class="row">
+          <div class="container">
+            <div class="row">
+              <div class="col-md-12">
+                <h3>CARATERÍSTICAS DEL PUNTO: El árbol pertenece al punto
+                  <span>4</span>
+                </h3>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="col-md-4">
+                  <div class="col-md-6">
+                    <label class="control-label" for="exampleInputEmail1">Especie</label>
+                  </div>
+                  <div class="col-md-3">
+                    <label class="control-label" for="exampleInputEmail1">Clase social</label>
+                  </div>
+                  <div class="col-md-3">
+                    <label class="control-label" for="exampleInputEmail1">Copa somb.</label>
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="col-md-2">
+                    <label class="control-label" for="exampleInputEmail1">Defo</label>
+                  </div>
+                  <div class="col-md-2">
+                    <label class="control-label" for="exampleInputEmail1">Fruct</label>
+                  </div>
+                  <div class="col-md-2">
+                    <label class="control-label" for="exampleInputEmail1">C.Ev.</label>
+                  </div>
+                  <div class="col-md-2">
+                    <label class="control-label" for="exampleInputEmail1">C.Muerta.</label>
+                  </div>
+                  <div class="col-md-4">
+                    <label class="control-label" for="exampleInputEmail1">Agentes y síntomas</label>
+                  </div>
+                </div>
+                <div class="col-md-1"></div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="col-md-4">
+                  <div class="col-md-6">
+                    <select class="form-control" id="select">
+                      <option value="r">Pinus nigra</option>
+                      <option value="g">Pinus pinaster</option>
+                      <option value="b">Pinus sylvestris</option>
+                    </select>
+                  </div>
+                  <div class="col-md-3">
+                    <input class="form-control" id="exampleInput" placeholder="" type="text">
+                  </div>
+                  <div class="col-md-3">
+                    <input class="form-control" id="exampleInput" placeholder="" type="text">
+                  </div>
+                </div>
+                <div class="col-md-7">
+                  <div class="col-md-2">
+                    <select class="form-control" id="select">
+                      <option value="r">0</option>
+                      <option value="g">5</option>
+                      <option value="b">10</option>
+                    </select>
+                  </div>
+                  <div class="col-md-2">
+                    <select class="form-control" id="select">
+                      <option value="r">0</option>
+                      <option value="g">5</option>
+                      <option value="b">10</option>
+                    </select>
+                  </div>
+                  <div class="col-md-2">
+                    <select class="form-control" id="select">
+                      <option value="r">0</option>
+                      <option value="g">5</option>
+                      <option value="b">10</option>
+                    </select>
+                  </div>
+                  <div class="col-md-2">
+                    <input class="form-control" id="exampleInput" placeholder="" type="text">
+                  </div>
+                  <div class="col-md-4">
+                    <input class="form-control" id="exampleInput" placeholder="" type="text">
+                  </div>
+                </div>
+                <div class="col-md-1">
+                  <a class="btn btn-primary" data-toggle="modal" data-target="#myModalAgentes">Agentes</a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">×</button>
+            <h4 class="modal-title">Selección de punto</h4>
+          </div>
+          <div class="modal-body">
+            <select class="form-control" id="select">
+              <option value="r">6</option>
+              <option value="g">7</option>
+              <option value="b">10</option>
+            </select>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Ir a los datos del punto</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--fin modal -->
+    <!-- Modal -->
+    <div id="myModalAgentes" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">×</button>
+            <h4 class="modal-title">Ventana modal para introduccion de agentes</h4>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+              <div class="col-md-6">
+                <select class="form-control" id="select">
+                  <option value="r">6</option>
+                  <option value="g">7</option>
+                  <option value="b">10</option>
+                </select>
+              </div>
+              <div class="col-md-6">
+                <select class="form-control" id="select">
+                  <option value="r">6</option>
+                  <option value="g">7</option>
+                  <option value="b">10</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Guadar datos de agentes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--fin modal -->
+  
+
+</body></html>
